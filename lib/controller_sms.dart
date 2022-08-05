@@ -10,11 +10,11 @@ class SmsController {
 
   getStringSms(SmsMessage smsMessage) async {
     final regex1 = RegExp(r'[0-9]+\,[0-9]+');
-    final regex2 = RegExp(r'[!@#$%^&*(),.?":{}|<>]');
+    // final regex2 = RegExp(r'[!@#$%^&*(),.?":{}|<>]');
     final match1 = regex1.firstMatch(smsMessage.body!);
     final match2 = match1!.group(0);
     int money = int.parse(match2!.replaceAll(',', ''));
-    var index = smsMessage.body!.lastIndexOf(regex2);
+    // var index = smsMessage.body!.lastIndexOf(regex2);
     final SmsController smsController = SmsController();
     final match4 = smsMessage.body!.trim().split('.');
     String data4 = '';

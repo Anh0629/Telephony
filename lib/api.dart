@@ -7,8 +7,7 @@ import 'package:telephony_demo/status_api.dart';
 class ApiSms {
   static Future<Object> apiSms(Sms body) async {
     try {
-      var response = await http.post(
-          Uri.parse('https://hoigg.net/api/save-transaction-payment'),
+      var response = await http.post(Uri.parse(''),
           headers: {'Content-type': 'application/json'},
           body: jsonEncode(body));
       if (response.statusCode == 200) {
